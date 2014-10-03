@@ -43,12 +43,6 @@ public static class SHelper {
 		}
 	}
 
-	public static void PlayAnimationTK2d (tk2dSpriteAnimator animator, string clipName) {
-		if (!animator.IsPlaying(clipName)) {
-			animator.Play(clipName);
-		}
-	}
-
 	public static bool Gamble (float successRate) {
 		if (successRate >= 100) return true;
 		if (successRate <= 0) return false;
