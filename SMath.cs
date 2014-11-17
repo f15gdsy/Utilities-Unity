@@ -218,6 +218,18 @@ public static class SMath {
 		}
 		return degree;
 	}
+
+	public static bool CheckSamePoint (Vector2 p1, Vector2 p2, float tolerance) {
+		return CheckSamePoint(SMath.Vec2ToVec3(p1), SMath.Vec2ToVec3(p2), tolerance);
+	}
+
+	public static bool CheckSamePoint (Vector3 p1, Vector3 p2, float tolerance) {
+		return (p1 - p2).sqrMagnitude <= tolerance * tolerance;
+	}
+
+	public static float CrossProduct2D (Vector2 p, Vector2 q) {
+		return p.x * q.y - p.y * q.x;
+	}
 }
 
 public enum PositionSituation {
