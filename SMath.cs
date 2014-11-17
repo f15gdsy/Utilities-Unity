@@ -203,18 +203,6 @@ public static class SMath {
 	}
 
 	public static float VectorToDegree (Vector2 v) {
-//		if (v.x == 0) {
-//			if (v.y >= 0) {
-//				return 90;
-//			}
-//			else {
-//				return 270;
-//			}
-//		}
-//
-//		float addOn = v.x < 0 ? 180 : 0;
-//		float k = v.y / v.x;
-//		float degree = Mathf.Atan(k) * Mathf.Rad2Deg + addOn;
 		float radian = Mathf.Atan2(v.y, v.x);
 		float degree = radian * Mathf.Rad2Deg;
 		return degree;
