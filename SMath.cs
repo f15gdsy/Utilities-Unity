@@ -209,6 +209,11 @@ public static class SMath {
 //		return ClampDegree0To360(degree);
 	}
 
+	public static Vector2 DegreeToUnitVector (float degree) {
+		float radian = degree * Mathf.Deg2Rad;
+		return new Vector2(Mathf.Cos(radian), Mathf.Sin(radian));
+	}
+
 	public static float ClampDegree0To360 (float degree) {
 		while (degree >= 360) {
 			degree -= 360;

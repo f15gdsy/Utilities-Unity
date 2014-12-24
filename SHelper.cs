@@ -63,4 +63,10 @@ public static class SHelper {
 		trans.localEulerAngles = angle;
 	}
 
+	public static Vector2 GetScreenSizeInWorld () {
+		float height = 2 * Camera.main.orthographicSize;
+		float width = height * Camera.main.aspect;
+		return new Vector2(height, width);
+	}
+
 }
